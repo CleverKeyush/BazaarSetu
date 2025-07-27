@@ -3,8 +3,10 @@
   command = "npm run build"
 
 [build.environment]
-  NODE_VERSION = "18"
-  NPM_VERSION = "9"
+  NODE_VERSION = "20"
+  NPM_VERSION = "10"
+  CI = "false"
+  GENERATE_SOURCEMAP = "false"
 
 [[redirects]]
   from = "/*"
@@ -14,10 +16,14 @@
 [context.production.environment]
   REACT_APP_API_URL = "https://bazaarsetu-backend.onrender.com"
   REACT_APP_NODE_ENV = "production"
+  CI = "false"
+  GENERATE_SOURCEMAP = "false"
 
 [context.deploy-preview.environment]
   REACT_APP_API_URL = "https://bazaarsetu-backend.onrender.com"
   REACT_APP_NODE_ENV = "production"
+  CI = "false"
+  GENERATE_SOURCEMAP = "false"
 
 [[headers]]
   for = "/*"
